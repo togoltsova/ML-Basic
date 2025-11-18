@@ -71,7 +71,7 @@ class Vehicle(ABC):
         """
         if self.started:
             return print("Vehicle is already started")
-        if self.fuel < 0:
+        if self.fuel <= 0:
             raise LowFuelError("Not enough fuel")
         self.started = True
         return print("Vehicle started")

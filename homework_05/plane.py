@@ -17,7 +17,7 @@ class Plane(Vehicle):
         принимает число, проверяет, что в сумме с текущим `cargo` не будет перегруза, и обновляет значение,
         в ином случае выкидывает исключение `exceptions.CargoOverload`
         """
-        if self.cargo + cargo < self.max_cargo:
+        if self.cargo + cargo <= self.max_cargo:
             raise CargoOverload("Volume of cargo is overloaded")
         self.cargo += cargo
         return
