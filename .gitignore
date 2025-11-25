@@ -1,5 +1,6 @@
 .venv
 venv
+.myvenv
 .vscode
 __pycache__
 *.pyc
@@ -9,3 +10,4 @@ __pycache__
 *.sqlite3
 buf
 .idea
+.DS_Store
