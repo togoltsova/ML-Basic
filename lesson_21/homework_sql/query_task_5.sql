@@ -1,0 +1,17 @@
+--
+--Задание 5.
+-- Какова площадь города Найденовска (в квадратах)?
+-- 1)
+SELECT
+    count(*) AS squares_count
+FROM
+    map;
+
+-- Площадь:
+-- 12345 квадратов
+
+-- 2)
+SELECT
+    (max(number) + 1)  AS squares_count
+FROM
+    map;
