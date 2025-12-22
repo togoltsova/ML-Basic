@@ -10,8 +10,3 @@ FROM
 -- Площадь:
 -- 12345 квадратов
 
--- 2)
-SELECT
-    (max(number) + 1)  AS squares_count
-FROM
-    map;

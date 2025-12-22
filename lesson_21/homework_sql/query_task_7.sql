@@ -17,6 +17,19 @@ WHERE
                                 map)
             );
 
--- Объекты:
--- Гора
--- Скала
+-- second solution
+SELECT
+    object,
+    (SELECT
+         median(y)
+     FROM
+         map
+    ) AS y_median
+FROM
+    map
+WHERE y = y_median
+GROUP BY object;
+
+-- object | y_median
+-- Гора	    411
+-- Скала	411

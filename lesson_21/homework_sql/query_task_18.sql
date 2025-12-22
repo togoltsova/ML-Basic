@@ -19,3 +19,18 @@ WHERE
 -- ----
 -- Растеряевы
 -- Дуров
+
+-- second solution
+SELECT
+    DISTINCT residents.family AS family_who_lost_smth_in_crypt
+FROM
+    found
+INNER JOIN
+        map
+            ON found.where_x = map.x
+INNER JOIN
+        residents
+            ON found.who = residents.id
+WHERE
+    map.object == 'Склеп'
+    AND where_y = map.y;
