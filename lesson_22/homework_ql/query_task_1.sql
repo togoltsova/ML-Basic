@@ -45,7 +45,7 @@ FROM
 SELECT
     min(month) AS month_min,
     max(month) AS month_max,
-    min(temperature) AS temp_min ,
+    min(temperature) AS temp_min,
     avg(temperature) AS temp_avg,
     max(temperature) AS temp_max,
     min(pressure) AS pressure_min,
@@ -53,15 +53,15 @@ SELECT
     max(pressure) AS pressure_max
 FROM
     weather;
--- min(month) | max(month) | min(temperature) | avg(temperature) | max(temperature) | min(pressure) | avg(pressure) | max(pressure)
+-- month_min | month_max | temp_min | temp_avg | temp_max | pressure_min | pressure_avg | pressure_max
 -- 1	4	-130	62.32142857142857	345	4.0	5.417857142857143	6.1
 
+-- Какой перепад температур наблюдается на Меркурии?
+SELECT
+    min(temperature) AS temp_min,
+    max(temperature) AS temp_max
+FROM
+    weather;
 
--- 1) По данным Википедии (https://ru.wikipedia.org/wiki/Меркурий):
--- "Поскольку атмосферы у Меркурия почти нет, температура его поверхности меняется сильнее,
--- чем на любой другой планете Солнечной системы: от 100 К (−173 °C) ночью до 700 К (+427 °C) днём в экваториальных регионах"
--- 2) таблица weather не содержит информации о локации
--- 3) таблица weather не содержит информации об единицах измерения температуры
--- 4) понятие "месяц" на Меркурии не имеет смысла, т.к. нет Луны. В таблице weather есть такая информация (month)
--- 5) "Поскольку атмосферы у Меркурия почти нет", соответсвенно и давления на поверхности почти нет. В таком случае, не важен факт, что в таблице отсутствуют единицы измерения давления. Важно, что значение pressure_max = 6.1 сильно отличается от 0.
--- Вывод: таблица weather не содержит данные о погоде на Меркурии
+-- temp_min | temp_max
+-- -130	    345
