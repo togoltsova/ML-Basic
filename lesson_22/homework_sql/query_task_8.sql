@@ -16,7 +16,7 @@ FROM
 GROUP BY
     month,
     day
-WINDOW win AS (ORDER BY month, day ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING)
+WINDOW win AS (ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING)
 LIMIT 5;
 
 -- month | day | is_rainy | days_count_is_rainy

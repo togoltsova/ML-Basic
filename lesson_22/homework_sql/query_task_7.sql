@@ -7,12 +7,9 @@ SELECT
     month,
     day,
     is_rainy,
-    sum(is_rainy) over (ORDER BY month, day) AS days_count_is_rainy
+    sum(is_rainy) over (ORDER BY month, day ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS days_count_is_rainy
 FROM
     weather
-GROUP BY
-    month,
-    day
 LIMIT 5;
 
 -- month | day | is_rainy | days_count_is_rainy
