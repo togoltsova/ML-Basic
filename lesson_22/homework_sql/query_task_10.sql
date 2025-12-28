@@ -12,7 +12,7 @@ SELECT
     *
 FROM
     win_pressure_preceding
-WHERE is_rainy = TRUE
+WHERE is_rainy = 1
 ORDER BY
     month,
     day
