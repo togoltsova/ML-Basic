@@ -1,0 +1,4 @@
+employee_id,first_name,last_name,email                  ,hire_date ,department_id,salary   ,job_title
+1          ,John      ,Smith    ,john.smith@techinno.com,2005-06-10,1            ,150000.00,Chief Technology Officer
+2          ,Sarah     ,Johnson  ,sarah.j@techinno.com   ,2006-03-15,1            ,120000.00,Senior Developer
+3          ,Michael   ,Williams ,michael.w@techinno.com ,2007-11-20,2            ,110000.00,Marketing Director

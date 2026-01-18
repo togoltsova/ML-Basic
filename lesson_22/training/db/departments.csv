@@ -1,0 +1,4 @@
+department_id,department_name       ,company_id,budget    ,manager_id
+1            ,Research & Development,1         ,5000000.00,1
+2            ,Marketing             ,1         ,3000000.00,3
+3            ,Human Resources       ,1         ,1500000.00,5

@@ -1,0 +1,4 @@
+company_id,company_name          ,industry  ,founded_date,headquarters
+1         ,Tech Innovations      ,Technology,2000-03-15  ,San Francisco
+2         ,Global Finance        ,Finance   ,1985-11-20  ,New York
+3         ,Green Energy Solutions,Energy    ,2010-06-30  ,Austin
